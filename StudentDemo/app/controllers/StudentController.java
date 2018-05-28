@@ -93,4 +93,13 @@ public class StudentController extends Controller
 	}
 	
 	
+	
+	public static void deleteJsonDataBasedOnId(Long sid)
+	{
+		StudentModelRepository.deleteDataBasedOnID(sid);
+	}
+	
+	
+	
+	
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import play.db.jpa.JPA;
 
@@ -61,14 +62,26 @@ public class StudentModelRepository {
 		String name =   studentEntity.getName();
 		int age =       studentEntity.getAge();
 		String gender = studentEntity.getGender();
-			
 		
-		System.out.println(name+age+gender+sid);
 		//update student set name="sahil" and age=24 and sex= "male" where id=1
-		String query="update StudentEntity set name="+name+" and age="+age+" and gender="+gender+" where id="+sid;
-		System.out.println(query);
-		//JPA.em().createQuery(query);
+		String update="update StudentEntity set name=:name,age=:age,gender=:gender where id=:id";
 		
+		Query query =JPA.em().createQuery(update);
+		query.setParameter("name", name);
+		query.setParameter("age", age);
+		query.setParameter("gender", gender);
+		query.setParameter("id", sid);
+		query.executeUpdate();
+		//studentEntity.merge();
+		
+		
+		
+	}
+
+	public static void deleteDataBasedOnID(Long sid) 
+	{
+		int numberOfRows=studentEntity.delete("delete from StudentEntity where id=?", sid);
+		System.out.println(numberOfRows+" rows deleted");
 	}
 
 	

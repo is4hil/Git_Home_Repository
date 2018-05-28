@@ -33,6 +33,11 @@ GET 	/student/findbyidandname/{sid}/{name}	StudentController.getJsonDataFromDBBa
 
 PUT 	/student/update/{sid}					StudentController.putJsonDataBasedOnId
 
+DELETE 	/student/delete/{sid}					StudentController.deleteJsonDataBasedOnId
+
+
+
+
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
