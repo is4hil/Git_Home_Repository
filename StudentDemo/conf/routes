@@ -35,6 +35,13 @@ PUT 	/student/update/{sid}					StudentController.putJsonDataBasedOnId
 DELETE 	/student/delete/{sid}					StudentController.deleteJsonDataBasedOnId
 
 
+#EmployeeController
+
+GET 	/employees/method1/					EmployeeController.method1
+
+GET 	/employees/method2/					EmployeeController.method2
+
+GET 	/employees/method3/					EmployeeController.method3
 
 
 

@@ -1,0 +1,4 @@
+self: play -> security-inceptor-module 0.1
+
+require:
+    - play

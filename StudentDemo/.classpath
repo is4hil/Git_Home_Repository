@@ -3,6 +3,7 @@
 	<classpathentry excluding="japidviews/**|rythm/**|views/**" kind="src" path="app"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="docviewer"/>
+	<classpathentry kind="src" path="security-inceptor-module"/>
 	<classpathentry kind="src" path="MySecurityModule"/>
 	
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>

@@ -3,6 +3,7 @@
 require:
     - play
     - MySecurityModule -> MySecurityModule latest.integration
+    - security-inceptor-module -> security-inceptor-module latest.integration
     
 repositories:
     - My modules:
@@ -10,5 +11,6 @@ repositories:
         artifact:   ${application.path}/../[module]
         contains:
             - MySecurityModule
+            - security-inceptor-module
 
 
