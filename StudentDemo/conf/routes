@@ -11,5 +11,28 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
+
+GET		/student/{msg}							StudentController.methodToPrintWhatUserInserts
+
+GET		/student/								StudentController.methodToPrintWhatUserInserts
+
+GET		/student/getjsondata/{sid}				StudentController.getJsonDataBasedOnId
+
+GET		/student/getjsondata/					StudentController.getJsonDataBasedOnId
+
+
+POST	/student/postjsondata/					StudentController.postJsonDataAndSaveInMap
+
+POST	/student/insertjsondata/				StudentController.postJsonDataAndSaveInDB
+
+GET		/student/findbyid/{sid}					StudentController.getJsonDataFromDBBasedOnId
+
+GET		/student/findall/					    StudentController.getAllJsonDataFromDB
+
+GET 	/student/findbyidandname/{sid}/{name}	StudentController.getJsonDataFromDBBasedOnIdAndName
+
+PUT 	/student/update/{sid}					StudentController.putJsonDataBasedOnId
+
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
