@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>StudentDemo</name>
+	<name>MySecurityModule</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,5 @@
 	</natures>
 	<linkedResources><link><name>docviewer</name><type>2</type><location>/Applications/play-1.3.1/modules/docviewer/app</location></link>
 <link><name>public/docviewer</name><type>2</type><location>/Applications/play-1.3.1/modules/docviewer/public</location></link>
-<link><name>MySecurityModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/MySecurityModule/app</location></link>
-<link><name>conf/MySecurityModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/MySecurityModule/conf</location></link>
 </linkedResources>
 </projectDescription>

@@ -2,3 +2,13 @@
 
 require:
     - play
+    - MySecurityModule -> MySecurityModule latest.integration
+    
+repositories:
+    - My modules:
+        type:       local
+        artifact:   ${application.path}/../[module]
+        contains:
+            - MySecurityModule
+
+

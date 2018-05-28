@@ -33,6 +33,11 @@ public class StudentEntity extends Model {
 		this.age = age;
 		this.gender = gender;
 	}
+	
+	public StudentEntity()
+	{
+		
+	}
 
 	/*public int getId() {
 		return id;

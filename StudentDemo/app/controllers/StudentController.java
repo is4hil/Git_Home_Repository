@@ -3,15 +3,24 @@ package controllers;
 import java.util.List;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
+import controllers.MySecurityModule.GateKeeper;
 import models.StudentEntity;
 import models.StudentModel;
 import models.StudentModelRepository;
 import play.mvc.Controller;
+import play.mvc.With;
 
+@With(GateKeeper.class)
 public class StudentController extends Controller
 {
+	/*@Before(only={"putJsonDataBasedOnId"})
+	 static void AuthenticateUser()
+		{
+			System.out.println("********Authenticating******");
+		}
+	*/
+	
 	static Gson gson=new Gson();
 	public static void methodToPrintWhatUserInserts(String msg) 
 	{
@@ -52,10 +61,12 @@ public class StudentController extends Controller
 	public static void postJsonDataAndSaveInDB() 
 	{
 		String body=params.get("body");
-		StudentEntity studentEntity=gson.fromJson(body, StudentEntity.class);
+		
+		//StudentEntity studentEntity=gson.fromJson(body, StudentEntity.class);
+		StudentEntity studentEntity =gson.fromJson(body, StudentEntity.class);
+		
 		
 		//int id=studentEntity.getId();
-		
 		/*String name=studentEntity.getName();
 		int age=studentEntity.getAge();
 		String gender=studentEntity.getGender();*/

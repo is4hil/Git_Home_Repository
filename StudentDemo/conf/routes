@@ -20,7 +20,6 @@ GET		/student/getjsondata/{sid}				StudentController.getJsonDataBasedOnId
 
 GET		/student/getjsondata/					StudentController.getJsonDataBasedOnId
 
-
 POST	/student/postjsondata/					StudentController.postJsonDataAndSaveInMap
 
 POST	/student/insertjsondata/				StudentController.postJsonDataAndSaveInDB

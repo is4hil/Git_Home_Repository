@@ -32,9 +32,11 @@ public class StudentModelRepository {
 		
 	}
 
-	public static void insertInDB(StudentEntity studentEntity) {
+	public static void insertInDB(StudentEntity studentEntity) 
+	{
 		//StudentEntity studentEntity2=new StudentEntity(1, "sahil", 24, "amle");
 		studentEntity.save();
+		
 		
 	}
 
@@ -82,6 +84,7 @@ public class StudentModelRepository {
 	{
 		int numberOfRows=studentEntity.delete("delete from StudentEntity where id=?", sid);
 		System.out.println(numberOfRows+" rows deleted");
+		
 	}
 
 	
