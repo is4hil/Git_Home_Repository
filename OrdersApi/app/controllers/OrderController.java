@@ -19,5 +19,11 @@ public class OrderController extends Controller {
 
 	}
 	
+	public static void truncateOrder(Long id) 
+	{
+		OrderService orderService=new OrderService();
+		orderService.deleteOrder(id);
+		renderJSON("{\"success\":\"true\"}");
+	}
 
 }

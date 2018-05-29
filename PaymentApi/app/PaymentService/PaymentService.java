@@ -14,6 +14,13 @@ public class PaymentService {
 		PaymentEntity  paymentEntity=new PaymentEntity(paymentDTO.getOrderId(), paymentDTO.getAmtReceived(), paymentDTO.getPaymentMode());
 		paymentEntity.save();
 	}
+
+	public void deletePaymentDetails(long id) {
+		PaymentEntity  paymentEntity=new PaymentEntity();
+		paymentEntity.delete("delete from PaymentEntity where id=?", id);
+				
+		
+	}
 		
 	}
 

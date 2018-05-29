@@ -13,5 +13,7 @@ GET     /public/                                staticDir:public
 
 POST   /payments/createorder/					PaymentController.createOrder
 
+DELETE /payments/deleteorder/{id}				PaymentController.deleteOrder
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

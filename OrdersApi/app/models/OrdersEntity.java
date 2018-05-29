@@ -30,6 +30,13 @@ public class OrdersEntity extends Model{
 	
 	
 
+	public OrdersEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	public String getProductName() {
 		return productName;
 	}

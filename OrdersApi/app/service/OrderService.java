@@ -45,4 +45,15 @@ public class OrderService implements IOrdersService {
 
 	}
 
+	public void deleteOrder(Long id) {
+		OrderDTO orderDTO=new OrderDTO();
+		OrdersEntity ordersEntity = new OrdersEntity(orderDTO.getProductName(), orderDTO.getProductPrice(),
+				orderDTO.getPaymentMode());
+		ordersEntity.delete("delete from OrdersEntity where id=?", id);
+		
+		String createPaymentUrl = new StringBuilder(PAYMENT_APP_URL).append("payments/deleteorder/").toString();
+		WSRequest request = WS.url(createPaymentUrl).setHeader("Content-Type", "application/json");
+
+	}
+
 }

@@ -19,4 +19,10 @@ public class PaymentController extends Controller
 		
 	}
 
+	
+	public static void deleteOrder(long id)
+	{
+		PaymentService paymentService=new PaymentService();
+		paymentService.deletePaymentDetails(id);
+	}
 }
