@@ -1,0 +1,4 @@
+self: play -> StatusModule 0.1
+
+require:
+    - play

@@ -61,7 +61,7 @@ public class StudentModelRepository {
 
 	public static void updateDataBasedOnId(StudentEntity studentEntity,Long sid) 
 	{
-		String name =   studentEntity.getName();
+		/*String name =   studentEntity.getName();
 		int age =       studentEntity.getAge();
 		String gender = studentEntity.getGender();
 		
@@ -73,9 +73,14 @@ public class StudentModelRepository {
 		query.setParameter("age", age);
 		query.setParameter("gender", gender);
 		query.setParameter("id", sid);
-		query.executeUpdate();
+		query.executeUpdate();*/
 		//studentEntity.merge();
 		
+		
+		/*String name=studentEntity.getName();
+		int age=studentEntity.getAge();
+		String gender=studentEntity.getGender();*/
+		studentEntity.save();
 		
 		
 	}
