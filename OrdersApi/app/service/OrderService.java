@@ -53,7 +53,15 @@ public class OrderService implements IOrdersService {
 		
 		String createPaymentUrl = new StringBuilder(PAYMENT_APP_URL).append("payments/deleteorder/").toString();
 		WSRequest request = WS.url(createPaymentUrl).setHeader("Content-Type", "application/json");
-
+		request.get();
+		try {
+			HttpResponse httpResponse = request.get();
+			System.out.println(httpResponse.getStatusText());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 }
