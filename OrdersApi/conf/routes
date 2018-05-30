@@ -14,7 +14,17 @@ GET     /public/                                staticDir:public
 
 POST   /orders/placeorder/						OrderController.placeOrder
 
-DELETE /orders/deleteorder/{id}					OrderController.truncateOrder
+DELETE /orders/deleteorderpermanently/{id}		OrderController.truncateOrder
+
+DELETE /orders/deleteorderremotely/{id}			OrderController.truncateOrderRemotely
+
+GET	   /orders/getorderbyid/{id}				OrderController.getOrderDetails
+
+GET	   /orders/getallorders					    OrderController.getAllOrderDetails
+
+GET	   /orders/getallactiveorders/				OrderController.getAllActiveOrderDetails
+
+
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

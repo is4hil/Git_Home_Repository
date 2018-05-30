@@ -15,5 +15,7 @@ POST   /payments/createorder/					PaymentController.createOrder
 
 DELETE /payments/deleteorder/{id}				PaymentController.deleteOrder
 
+DELETE /payments/deleteorderremotely/{id}		PaymentController.deleteOrderRemotely
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

@@ -4,12 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.SerializedName;
+
 import play.db.jpa.Model;
 
 @Entity
 @Table(name = "order_table")
 public class OrdersEntity extends Model {
 
+	@SerializedName("product_name")
 	@Column(name = "product_name")
 	private String productName;
 

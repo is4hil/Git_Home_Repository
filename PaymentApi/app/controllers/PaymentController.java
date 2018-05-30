@@ -26,4 +26,13 @@ public class PaymentController extends Controller
 		IPaymentService paymentService=new PaymentService();
 		paymentService.deletePaymentDetails(id);
 	}
+
+
+	public static void deleteOrderRemotely(Long id) {
+		IPaymentService paymentService=new PaymentService();
+		paymentService.deletePaymentDetailsremotely(id);
+		renderJSON("{\"OrderDeletedRemotely\":\"successd\"}");
+		
+	
+	}
 }

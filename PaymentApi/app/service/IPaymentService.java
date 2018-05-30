@@ -8,4 +8,6 @@ public interface IPaymentService {
 
 	void deletePaymentDetails(long id);
 
+	void deletePaymentDetailsremotely(Long id);
+
 }
