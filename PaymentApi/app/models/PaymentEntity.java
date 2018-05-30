@@ -5,29 +5,34 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 import play.db.jpa.Model;
+
 @Entity
-@Table(name="payment_table")
+@Table(name = "payment_table")
 public class PaymentEntity extends Model {
-	
-	@Column(name="order_id")
+
+	@Column(name = "order_id")
 	private int orderId;
 
-	@Column(name="payment_amount")
+	@Column(name = "payment_amount")
 	private int amtReceived;
 
-	@Column(name="payment_mode")
+	@Column(name = "payment_mode")
 	private String paymentMode;
 
-	public PaymentEntity(int orderId, int amtReceived, String paymentMode) {
+	@Column(name = "status")
+	private String status;
+
+	public PaymentEntity() {
+		super();
+	}
+
+	public PaymentEntity(int orderId, int amtReceived, String paymentMode,
+			String status) {
 		super();
 		this.orderId = orderId;
 		this.amtReceived = amtReceived;
 		this.paymentMode = paymentMode;
-	}
-
-	public PaymentEntity() {
-		super();
-		// TODO Auto-generated constructor stub
+		this.status = status;
 	}
 
 	public int getOrderId() {
@@ -54,7 +59,19 @@ public class PaymentEntity extends Model {
 		this.paymentMode = paymentMode;
 	}
 
-	
-	
-	
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "PaymentEntity [orderId=" + orderId + ", amtReceived="
+				+ amtReceived + ", paymentMode=" + paymentMode + ", status="
+				+ status + "]";
+	}
+
 }

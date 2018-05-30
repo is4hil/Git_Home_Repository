@@ -11,6 +11,7 @@ public class PaymentDTO {
 
 	@SerializedName("payment_mode")
 	private String paymentMode;
+	
 
 	public PaymentDTO(int orderId, int amtReceived, String paymentMode) {
 		super();

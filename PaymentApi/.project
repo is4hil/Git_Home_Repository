@@ -15,12 +15,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	<linkedResources><link><name>docviewer</name><type>2</type><location>/Applications/play-1.3.1/modules/docviewer/app</location></link>
-<link><name>public/docviewer</name><type>2</type><location>/Applications/play-1.3.1/modules/docviewer/public</location></link>
-<link><name>MySecurityModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/MySecurityModule/app</location></link>
-<link><name>conf/MySecurityModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/MySecurityModule/conf</location></link>
-<link><name>public/MySecurityModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/MySecurityModule/public</location></link>
-<link><name>StatusModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/StatusModule/app</location></link>
-<link><name>conf/StatusModule</name><type>2</type><location>/Users/isahil/Documents/workspace/Training/Git_Office_Repository/Git_Home_Repository/StatusModule/conf</location></link>
+	<linkedResources><link><name>docviewer</name><type>2</type><location>C:/Program Files (x86)/play/play-1.4.5/modules/docviewer/app</location></link>
+<link><name>public/docviewer</name><type>2</type><location>C:/Program Files (x86)/play/play-1.4.5/modules/docviewer/public</location></link>
+<link><name>StatusModule</name><type>2</type><location>C:/Users/is4hi/Documents/PlayWorkSpace/Git_Home_Repository/StatusModule/app</location></link>
+<link><name>conf/StatusModule</name><type>2</type><location>C:/Users/is4hi/Documents/PlayWorkSpace/Git_Home_Repository/StatusModule/conf</location></link>
+<link><name>MySecurityModule</name><type>2</type><location>C:/Users/is4hi/Documents/PlayWorkSpace/Git_Home_Repository/MySecurityModule/app</location></link>
+<link><name>conf/MySecurityModule</name><type>2</type><location>C:/Users/is4hi/Documents/PlayWorkSpace/Git_Home_Repository/MySecurityModule/conf</location></link>
 </linkedResources>
 </projectDescription>

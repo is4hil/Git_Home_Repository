@@ -2,9 +2,10 @@ package controllers;
 
 import com.google.gson.Gson;
 
-import PaymentService.PaymentService;
+import service.PaymentService;
 import models.PaymentDTO;
 import play.mvc.Controller;
+import service.IPaymentService;
 
 public class PaymentController extends Controller 
 {
@@ -13,7 +14,7 @@ public class PaymentController extends Controller
 	{
 		String body =params.get("body");
 		PaymentDTO paymentDTO=gson.fromJson(body,PaymentDTO.class);
-		PaymentService paymentService=new PaymentService();
+		IPaymentService paymentService=new PaymentService();
 		paymentService.insertPaymentDetails(paymentDTO);
 		renderJSON("{\"success\":\"Payment Details Inserted\"}");
 		
@@ -22,7 +23,7 @@ public class PaymentController extends Controller
 	
 	public static void deleteOrder(long id)
 	{
-		PaymentService paymentService=new PaymentService();
+		IPaymentService paymentService=new PaymentService();
 		paymentService.deletePaymentDetails(id);
 	}
 }
