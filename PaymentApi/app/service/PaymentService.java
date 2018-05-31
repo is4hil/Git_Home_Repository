@@ -30,7 +30,8 @@ public class PaymentService implements IPaymentService {
 		System.out.println(paymentEntity);
 		System.out.println(paymentEntity.getStatus());
 		
-		paymentEntity.setStatus(IStatusModule.IN_ACTIVE);
+		IStatusModule iStatusModule=new IStatusModule();
+		paymentEntity.setStatus(iStatusModule.IN_ACTIVE);
 		
 		System.out.println(paymentEntity.getStatus());
 		paymentEntity.save();

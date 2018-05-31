@@ -97,8 +97,10 @@ public class OrderService implements IOrdersService {
 		
 		System.out.println(ordersEntity.getStatus());
 		System.out.println(IStatusModule.IN_ACTIVE);
+		IStatusModule isStatusModule=new IStatusModule();
+		System.out.println(isStatusModule.IN_ACTIVE);
 		
-		ordersEntity.setStatus(IStatusModule.IN_ACTIVE);
+		ordersEntity.setStatus(isStatusModule.IN_ACTIVE);
 		
 		System.out.println(ordersEntity.getStatus());
 		
