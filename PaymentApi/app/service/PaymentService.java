@@ -1,6 +1,6 @@
 package service;
 
-import controllers.StatusModule.IStatusModule;
+import controllers.StatusModule.StatusModule;
 import models.PaymentDTO;
 import models.PaymentEntity;
 
@@ -12,7 +12,7 @@ public class PaymentService implements IPaymentService {
 		
 	public void insertPaymentDetails(PaymentDTO paymentDTO)
 	{
-		PaymentEntity  paymentEntity=new PaymentEntity(paymentDTO.getOrderId(), paymentDTO.getAmtReceived(), paymentDTO.getPaymentMode(),IStatusModule.ACTIVE);
+		PaymentEntity  paymentEntity=new PaymentEntity(paymentDTO.getOrderId(), paymentDTO.getAmtReceived(), paymentDTO.getPaymentMode(),StatusModule.ACTIVE);
 		paymentEntity.save();
 	}
 
@@ -28,14 +28,15 @@ public class PaymentService implements IPaymentService {
 		int iid=id.intValue();
 		PaymentEntity paymentEntity=PaymentEntity.find("orderId = ?" ,iid).first();
 		System.out.println(paymentEntity);
-		System.out.println(paymentEntity.getStatus());
+		System.out.println("paymentEntity.getStatus()--> "+paymentEntity.getStatus());
 		
-		IStatusModule iStatusModule=new IStatusModule();
-		paymentEntity.setStatus(iStatusModule.IN_ACTIVE);
+		StatusModule iStatusModule=new StatusModule();
+		System.out.println("paymentEntity.setStatus(iStatusModule.inActive())--> ");
+		paymentEntity.setStatus(iStatusModule.inActive());
 		
-		System.out.println(paymentEntity.getStatus());
+		System.out.println("(paymentEntity.getStatus());-->"+paymentEntity.getStatus());
 		paymentEntity.save();
-		System.out.println(paymentEntity.getStatus());
+		//System.out.println(paymentEntity.getStatus());
 		System.out.println("Deleted from Payment_Table Remotely");
 		
 	}

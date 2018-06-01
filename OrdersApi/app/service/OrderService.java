@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
-import controllers.StatusModule.IStatusModule;
+import controllers.StatusModule.StatusModule;
 import models.OrderDTO;
 import models.OrdersEntity;
 import models.PaymentDTO;
@@ -21,7 +21,7 @@ public class OrderService implements IOrdersService {
 
 	public void createOrder(OrderDTO orderDTO) {
 		OrdersEntity ordersEntity = new OrdersEntity(orderDTO.getProductName(), orderDTO.getProductPrice(),
-				orderDTO.getPaymentMode(),IStatusModule.ACTIVE);
+				orderDTO.getPaymentMode(),StatusModule.ACTIVE);
 		ordersEntity.save();
 
 		String createPaymentUrl = new StringBuilder(PAYMENT_APP_URL).append("payments/createorder/").toString();
@@ -96,11 +96,11 @@ public class OrderService implements IOrdersService {
 		ordersEntity=ordersEntity.findById(id);
 		
 		System.out.println(ordersEntity.getStatus());
-		System.out.println(IStatusModule.IN_ACTIVE);
-		IStatusModule isStatusModule=new IStatusModule();
-		System.out.println(isStatusModule.IN_ACTIVE);
+		//System.out.println(IStatusModule.IN_ACTIVE);
+		StatusModule iStatusModule=new StatusModule();
+		//System.out.println(iStatusModule.IN_ACTIVE);
 		
-		ordersEntity.setStatus(isStatusModule.IN_ACTIVE);
+		ordersEntity.setStatus(iStatusModule.inActive());
 		
 		System.out.println(ordersEntity.getStatus());
 		
@@ -115,7 +115,7 @@ public class OrderService implements IOrdersService {
 	@Override
 	public String getAllActiveOrder() {
 		OrdersEntity ordersEntity=new OrdersEntity();
-		ordersEntities=ordersEntity.find("status=?", IStatusModule.ACTIVE).fetch();
+		ordersEntities=ordersEntity.find("status=?", StatusModule.ACTIVE).fetch();
 		return gson.toJson(ordersEntities);
 	}
 
