@@ -30,9 +30,9 @@ public class PaymentService implements IPaymentService {
 		System.out.println(paymentEntity);
 		System.out.println("paymentEntity.getStatus()--> "+paymentEntity.getStatus());
 		
-		StatusModule iStatusModule=new StatusModule();
-		System.out.println("paymentEntity.setStatus(iStatusModule.inActive())--> ");
-		paymentEntity.setStatus(iStatusModule.inActive());
+		//StatusModule iStatusModule=new StatusModule();
+		
+		paymentEntity.setStatus(StatusModule.IN_ACTIVE);
 		
 		System.out.println("(paymentEntity.getStatus());-->"+paymentEntity.getStatus());
 		paymentEntity.save();

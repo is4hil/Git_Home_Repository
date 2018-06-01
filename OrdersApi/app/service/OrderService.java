@@ -96,12 +96,10 @@ public class OrderService implements IOrdersService {
 		ordersEntity=ordersEntity.findById(id);
 		
 		System.out.println(ordersEntity.getStatus());
-		//System.out.println(IStatusModule.IN_ACTIVE);
-		StatusModule iStatusModule=new StatusModule();
-		//System.out.println(iStatusModule.IN_ACTIVE);
-		
-		ordersEntity.setStatus(iStatusModule.inActive());
-		
+		//System.out.println(StatusModule.IN_ACTIVE);
+		//StatusModule iStatusModule=new StatusModule();
+		//ordersEntity.setStatus(iStatusModule.inActive());
+		ordersEntity.setStatus(StatusModule.IN_ACTIVE);
 		System.out.println(ordersEntity.getStatus());
 		
 		ordersEntity.save();
@@ -116,7 +114,9 @@ public class OrderService implements IOrdersService {
 	public String getAllActiveOrder() {
 		OrdersEntity ordersEntity=new OrdersEntity();
 		ordersEntities=ordersEntity.find("status=?", StatusModule.ACTIVE).fetch();
+		System.out.println("Playing with Git");
 		return gson.toJson(ordersEntities);
+		
 	}
 
 	
